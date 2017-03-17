@@ -4,10 +4,6 @@ describe DockingStation do
 
   describe "#release_bike" do
 
-    it "releases a bike" do
-      is_expected.to respond_to :release_bike
-    end
-
     it "no bike released if no bikes" do
       expect { subject.release_bike }.to raise_error("No Bikes")
     end
@@ -39,7 +35,7 @@ describe DockingStation do
   end
 
   it "Checks default maximum capacity" do
-    expect(subject.capacity).to eq subject::DEFAULT_CAPACITY
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   end
 
 
